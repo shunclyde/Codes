@@ -8,8 +8,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 1px 1px 1px gray;
-    margin-top: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.primary, .secondary{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    padding: 5px;
 }
 
 a{
@@ -19,23 +28,13 @@ a{
 
 a:hover{
     background-color: blueviolet;
-    color: whitesmoke;
-}
-
-li{
-    list-style: none;
-    padding: 5px;
-}
-
-.primary, .secondary{
-    display: flex;
-    align-items: center;
+    color: white;
 }
 
 .search-icon{
-    background-image: url("https://placehold.co/600x400");
-    width: 50px;
-    height: 50px;
+    background-image: url("https://img.icons8.com/ios7/600/search.png");
+    width: 30px;
+    height: 30px;
     background-size: 100% 100%;
     display: none;
 }
@@ -45,6 +44,10 @@ li{
     width: 250px;
     height: 35px;
     background-size: 100% 100%;
+}
+
+.sidebar{
+    background-color: darkgray;
 }
 
 .main{
@@ -58,13 +61,6 @@ li{
     background-size: 100% 100%;
 }
 
-.live{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-}
-
 .stream{
     background-image: url("https://placehold.co/350x200");
     width: 350px;
@@ -73,22 +69,24 @@ li{
     margin: 5px;
 }
 
-.sidebar{
-    background-color: darkgray
+.live{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
+    .sidebar{
+        width: 120px;
+    }
+
     .live-channels{
         display: none;
     }
-
-    .sidebar{
-        width: 100px;
-    }
 }
 
-@media screen and (max-width:800px){
-    .search{
+@media screen and (max-width: 800px){
+    .searchbar{
         display: none;
     }
 
